@@ -6,8 +6,8 @@ module.exports.listPlaces = (req, res, next) => {
   Places.find()
     // .populate("reviews")
     // .populate("user")
-    .then((products) => {
-      res.json(products);
+    .then((places) => {
+      res.json(places);
     })
     .catch((e) => next(e));
 };

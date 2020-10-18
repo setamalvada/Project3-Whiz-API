@@ -4,7 +4,7 @@ const authMiddleware = require("../middlewares/auth.middleware");
 const baseController = require("../controllers/base.controller");
 const userController = require("../controllers/user.controller");
 const mapController = require("../controllers/map.controller");
-// const teamController = require("../controllers/team.controller");
+const teamController = require("../controllers/team.controller");
 
 module.exports = router;
 
@@ -27,7 +27,7 @@ router.get("/logout", authMiddleware.isAuthenticated, userController.logout);
 
 // Users
 router.get("/user/:id", authMiddleware.isAuthenticated, userController.profile);
-
+router.patch("/user/:id", authMiddleware.isAuthenticated, userController.editProfile);
 // Map
 // router.get("/map", authMiddleware.isAuthenticated, mapController.map);
 router.get("/map", authMiddleware.isAuthenticated, mapController.listPlaces);
@@ -35,4 +35,4 @@ router.get("/map", authMiddleware.isAuthenticated, mapController.listPlaces);
 
 
 // Teams
-// router.get("/team", authMiddleware.isAuthenticated, teamController.displayTeam)
+router.get("/team", authMiddleware.isAuthenticated, teamController.displayTeam)

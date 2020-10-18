@@ -75,8 +75,28 @@ module.exports.logout = (req, res, next) => {
 module.exports.profile = (req, res, next) => {
   User.findById(req.params.id)
     .populate("places")
+    // .populate({
+     
+    //   populate: {
+    //     path: "places",
+    //     model: "Places"
+    //   },
+    // })
+   
    
     .then((u) => {
       res.json(u);
     });
 };
+
+module.exports.editProfile = (req, res, next) => {
+  User.findById(req.params.id)
+    .then((p) => {
+        p.update(req.body).then((editedUser) => {
+          res.json(editedUser);
+        });
+      
+    })
+    .catch((e) => next(e));
+  
+}
