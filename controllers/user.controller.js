@@ -92,9 +92,20 @@ module.exports.profile = (req, res, next) => {
 module.exports.editProfile = (req, res, next) => {
   User.findById(req.params.id)
     .then((p) => {
+       if(p.id != req.currentUser.id){
+        throw createError(403, "You can't edit other user's profiles");
+       }
+      else{
+
         p.update(req.body).then((editedUser) => {
           res.json(editedUser);
         });
+
+
+      }
+      
+      
+      
       
     })
     .catch((e) => next(e));
