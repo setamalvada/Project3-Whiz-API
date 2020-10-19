@@ -79,7 +79,7 @@ userSchema.methods.checkPassword = function (password) {
 userSchema.virtual("places", {
   ref: 'Places',
   localField: '_id',
-  foreignField: 'user'
+  foreignField: 'conquered_by'
 });
 
 const User = mongoose.model("User", userSchema);

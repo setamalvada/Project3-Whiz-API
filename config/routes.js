@@ -31,7 +31,7 @@ router.patch("/user/:id", authMiddleware.isAuthenticated, userController.editPro
 // Map
 // router.get("/map", authMiddleware.isAuthenticated, mapController.map);
 router.get("/map", authMiddleware.isAuthenticated, mapController.listPlaces);
-// router.patch("/map", authMiddleware.isAuthenticated, mapController.conquer);
+router.patch("/map/:id", authMiddleware.isAuthenticated, mapController.conquer);
 
 
 // Teams
