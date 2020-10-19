@@ -27,16 +27,26 @@ Promise.all([User.deleteMany(), Places.deleteMany()])
           userIds.push(u.id);
           for (let i = 0; i < placesN; i++) {
             const place = new Places({
-              longitude: faker.address.longitude(),
-              latitude: faker.address.latitude(),
+
+              // longitude: faker.address.longitude(),
+              // latitude: faker.address.latitude(),
               conquered_by: u._id,
-              owner: u.team,
+              location:{
+                type:'Point',
+                coordinates:[
+                  faker.address.longitude(), faker.address.longitude()
+                 ],
+
+              },
+              
+              
+               owner: u.team,
             });
             place
               .save()
-              .then((p)=>{
-                console.log(p.longitude)
-              })
+              // .then((p)=>{
+              //   console.log(p)
+              // })
               
               .catch((e) => console.log(e));
           }
@@ -69,3 +79,4 @@ Promise.all([User.deleteMany(), Places.deleteMany()])
   //   }
   // })
   // .catch((e) => console.log(e));
+

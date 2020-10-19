@@ -34,6 +34,12 @@ const userSchema = new mongoose.Schema(
       default: "none",
       enum: ['yellow', 'purple','none'] 
     },
+
+    counter: { 
+      type: Number, 
+      default: 0
+    
+    },
     
   },
   {

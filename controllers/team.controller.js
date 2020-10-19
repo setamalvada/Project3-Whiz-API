@@ -12,5 +12,24 @@ module.exports.displayTeam = (req, res, next) => {
     .catch((e) => next(e));
 };
 
+module.exports.displayTeamYellow = (req, res, next) => {
+  User.find({team: "yellow"})
+    .populate("places")
+    
+    .then((user) => {
+      res.json(user);
+    })
+    .catch((e) => next(e));
+};
+
+module.exports.displayTeamPurple = (req, res, next) => {
+  User.find({team: "purple"})
+    .populate("places")
+    
+    .then((user) => {
+      res.json(user);
+    })
+    .catch((e) => next(e));
+};
 
 

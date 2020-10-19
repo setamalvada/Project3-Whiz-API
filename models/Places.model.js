@@ -1,28 +1,48 @@
 const mongoose = require("mongoose");
-// const User = require("./User.model");
+// const pointSchema = require("./Point.model");
 
-const placesSchema = new mongoose.Schema(
-  {
-    longitude: {
-      type: Number,
-      max: 180,
-      min: -180,
-    },
-    latitude: {
-      type: Number,
-        max: 90,
-        min: -90,
+const pointSchema = new mongoose.Schema({
+  type: {
+    type: String,
+    enum: ['Point'],
+    required: true
+  },
+  coordinates: {
+    type: [Number],
+    required: true
+  }
+});
+
+const placesSchema = new mongoose.Schema({
+  // {
+  //   longitude: {
+  //     type: Number,
+  //     max: 180,
+  //     min: -180,
+  //   },
+  //   latitude: {
+  //     type: Number,
+  //       max: 90,
+  //       min: -90,
+  //   },
+  conquered_by: {
+    type: mongoose.Types.ObjectId,
+    ref: "User"
+  },
+
+
+  location: {
+    type: pointSchema,
+    required: true
     },
    
-    conquered_by: {
-      type: String,
-      default: "none",
-      required: true,
-    },
+  
+   
+    
 
     owner: {
       type: String,
-      default: "none",
+      default: null,
       required: true,
     },
     

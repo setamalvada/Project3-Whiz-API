@@ -35,4 +35,6 @@ router.patch("/map/:id", authMiddleware.isAuthenticated, mapController.conquer);
 
 
 // Teams
-router.get("/team", authMiddleware.isAuthenticated, teamController.displayTeam)
+router.get("/team/general", authMiddleware.isAuthenticated, teamController.displayTeam)
+router.get("/team/yellow", authMiddleware.isAuthenticated, teamController.displayTeamYellow)
+router.get("/team/purple", authMiddleware.isAuthenticated, teamController.displayTeamPurple)

@@ -5,7 +5,7 @@ const createError = require("http-errors");
 module.exports.listPlaces = (req, res, next) => {
   Places.find()
     // .populate("reviews")
-    // .populate("user")
+    .populate("conquered_by")
     .then((places) => {
       res.json(places);
     })
@@ -19,13 +19,17 @@ module.exports.listPlaces = (req, res, next) => {
 module.exports.conquer = (req, res, next) => {
   Places.findById(req.params.id)
     .then((p) => {
-      console.log(req.currentUser)
-      console.log(req.currentUser)
+      // console.log(req.currentUser)
+      // console.log(req.currentUser)
 
 
       if (p.owner === req.currentUser.team) {
         throw createError(403, "You can't conquer your own team place");
       } else {
+        User.findByIdAndUpdate(req.currentUser.id,{ $inc: { counter: 1 }})
+          .then((u)=>{
+            console.log(u)           
+          })
         return p.update({
           owner: req.currentUser.team,
           conquered_by: req.currentUser.id,
