@@ -5,6 +5,8 @@ const baseController = require("../controllers/base.controller");
 const userController = require("../controllers/user.controller");
 const mapController = require("../controllers/map.controller");
 const teamController = require("../controllers/team.controller");
+const placeController = require("../controllers/place.controller");
+
 
 module.exports = router;
 
@@ -21,6 +23,12 @@ authMiddleware.isNotAuthenticated,
 //  upload.single('avatar'), 
  userController.create
  )
+
+ router.post('/map/createPlace', 
+ authMiddleware.isAuthenticated,
+ //  upload.single('avatar'), 
+  placeController.createPlace
+  )
 
 router.post("/login", userController.login);
 router.get("/logout", authMiddleware.isAuthenticated, userController.logout);

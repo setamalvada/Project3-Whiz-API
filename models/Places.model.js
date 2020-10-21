@@ -36,14 +36,21 @@ const placesSchema = new mongoose.Schema({
     required: true
     },
    
-  
+  CODBARRIO: {
+    type: String,
+    default: null,
+  },
    
+  NOMBRE: {
+    type: String,
+    default: null,
+  },
     
 
     owner: {
       type: String,
       default: null,
-      required: true,
+      // required: true,
     },
     
   },

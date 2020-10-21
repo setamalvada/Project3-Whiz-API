@@ -16,6 +16,9 @@ module.exports.listPlaces = (req, res, next) => {
 
 
 
+
+
+
 module.exports.conquer = (req, res, next) => {
   Places.findById(req.params.id)
     .then((p) => {
