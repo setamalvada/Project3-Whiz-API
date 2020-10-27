@@ -49,7 +49,7 @@ const placesSchema = new mongoose.Schema({
 
     owner: {
       type: String,
-      default: null,
+      default: "none",
       // required: true,
     },
     

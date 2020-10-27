@@ -3,7 +3,7 @@ const User = require("../models/User.model");
 const createError = require("http-errors");
 
 module.exports.displayTeam = (req, res, next) => {
-  User.find()
+  User.find().limit(10).sort([['counter', 'desc']])
     .populate("places")
     
     .then((user) => {
@@ -13,7 +13,7 @@ module.exports.displayTeam = (req, res, next) => {
 };
 
 module.exports.displayTeamYellow = (req, res, next) => {
-  User.find({team: "yellow"})
+  User.find({team: "yellow"}).limit(10).sort([['counter', 'desc']])
     .populate("places")
     
     .then((user) => {
@@ -23,7 +23,7 @@ module.exports.displayTeamYellow = (req, res, next) => {
 };
 
 module.exports.displayTeamPurple = (req, res, next) => {
-  User.find({team: "purple"})
+  User.find({team: "purple"}).limit(10).sort([['counter', 'desc']])
     .populate("places")
     
     .then((user) => {
