@@ -19,7 +19,7 @@ router.get("/", baseController.index);
 //  )
 
 router.post('/signup', 
-authMiddleware.isNotAuthenticated,
+
 //  upload.single('avatar'), 
  userController.create
  )

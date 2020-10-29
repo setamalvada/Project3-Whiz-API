@@ -15,11 +15,12 @@ module.exports.create = (req, res, next) => {
       username: req.body.username,
       email: req.body.email,
       password: req.body.password,
-      repeatPassword: req.body.repeatPassword,
       avatar: req.file ? req.file.url : undefined,
       team: req.body.team
   })
   res.json(user);
+
+  console.log(user)
   
 
  user.save()
@@ -29,7 +30,7 @@ module.exports.create = (req, res, next) => {
      })
      .catch(error => {
          if (error instanceof mongoose.Error.ValidationError) {
-             res.render('users/new', { user, error: error.errors })
+            console.log(error)
          } else if (error.code === 11000) {
              res.render('users/new', {
                  user: {
