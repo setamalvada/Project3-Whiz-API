@@ -31,7 +31,7 @@ router.post('/signup',
   )
 
 router.post("/login", userController.login);
-router.get("/logout", authMiddleware.isAuthenticated, userController.logout);
+router.post("/logout", authMiddleware.isAuthenticated, userController.logout);
 
 // Users
 router.get("/user/:id", authMiddleware.isAuthenticated, userController.profile);
