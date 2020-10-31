@@ -26,7 +26,8 @@ const userSchema = new mongoose.Schema(
       lowercase: true
     },
      avatar: {
-    type: String
+    type: String,
+    default:"https://i.stack.imgur.com/l60Hf.png"
     },
 
     team: { 

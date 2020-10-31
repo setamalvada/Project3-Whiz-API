@@ -22,7 +22,7 @@ module.exports.listPlaces = (req, res, next) => {
 module.exports.conquer = (req, res, next) => {
   Places.findById(req.params.id)
     .then((p) => {
-  
+  console.log(req.currentUser)
       if (p.owner === req.currentUser.team) {
         throw createError(403, "You can't conquer your own team place");
       } else {
