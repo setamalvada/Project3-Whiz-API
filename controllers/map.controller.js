@@ -23,9 +23,9 @@ module.exports.conquer = (req, res, next) => {
   Places.findById(req.params.id)
     .then((p) => {
   console.log(req.currentUser)
-      if (p.owner === req.currentUser.team) {
-        throw createError(403, "You can't conquer your own team place");
-      } else {
+      // if (p.owner === req.currentUser.team) {
+      //   throw createError(403, "You can't conquer your own team place");
+      // } else {
         res.json(p.id);
         User.findByIdAndUpdate(req.currentUser.id,{ $inc: { counter: 1 }})
           .then((u)=>{
@@ -41,7 +41,7 @@ module.exports.conquer = (req, res, next) => {
           console.log(editedPlaces)
           res.json(editedPlaces);
         });
-      }
+      // }
     })
     .catch((e) => next(e));
 };

@@ -45,6 +45,12 @@ const placesSchema = new mongoose.Schema({
     type: String,
     default: null,
   },
+
+  date: {
+    type: Date,
+    default: Date.now
+    
+  },
     
 
     owner: {

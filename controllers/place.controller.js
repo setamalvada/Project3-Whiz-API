@@ -8,6 +8,7 @@ module.exports.createPlace = (req, res, next) => {
     const place = new Places({
        CODBARRIO: req.body.CODBARRIO,
        NOMBRE: req.body.NOMBRE,
+       date: req.body.date,
        location:{
            type: "Point",
            coordinates: [
