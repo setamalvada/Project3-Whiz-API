@@ -15,7 +15,7 @@ module.exports.create = (req, res, next) => {
       username: req.body.username,
       email: req.body.email,
       password: req.body.password,
-      avatar: req.file ? req.file.url : undefined,
+      avatar: req.file.url,
       team: req.body.team
   })
   res.json(user);

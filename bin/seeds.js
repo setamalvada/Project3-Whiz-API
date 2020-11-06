@@ -95,15 +95,15 @@ const data =[
   {conquered_by: null, CODBARRIO: "3-1", NOMBRE: "Pacífico" , location:{ type: "Point", coordinates: [ -3.6731109, 40.4060344 ] } },
   {conquered_by: null, CODBARRIO: "3-1", NOMBRE: "Pacífico" , location:{ type: "Point", coordinates: [ -3.6799679, 40.4026575 ] } },
   {conquered_by: null, CODBARRIO: "3-1", NOMBRE: "Pacífico" , location:{ type: "Point", coordinates: [ -3.683418, 40.404986 ] } },
-  {conquered_by: null, CODBARRIO: "3-1", NOMBRE: "Pacífico" , location:{ type: "Point", coordinates: [ -3.683254258458676, 40.404600215643093 ] } },
-  {conquered_by: null, CODBARRIO: "3-1", NOMBRE: "Pacífico" , location:{ type: "Point", coordinates: [ -3.683102525580741, 40.404605634674446 ] } },
-  {conquered_by: null, CODBARRIO: "3-1", NOMBRE: "Pacífico" , location:{ type: "Point", coordinates: [ -3.682999563985, 40.404546025329545 ] } },
-  {conquered_by: null, CODBARRIO: "3-1", NOMBRE: "Pacífico" , location:{ type: "Point", coordinates: [ -3.683140458800225, 40.40451893017277 ] } },
-  {conquered_by: null, CODBARRIO: "3-1", NOMBRE: "Pacífico" , location:{ type: "Point", coordinates: [ -3.682912859483324, 40.404464739859222 ] } },
+  // {conquered_by: null, CODBARRIO: "3-1", NOMBRE: "Pacífico" , location:{ type: "Point", coordinates: [ -3.683254258458676, 40.404600215643093 ] } },
+  // {conquered_by: null, CODBARRIO: "3-1", NOMBRE: "Pacífico" , location:{ type: "Point", coordinates: [ -3.683102525580741, 40.404605634674446 ] } },
+  // {conquered_by: null, CODBARRIO: "3-1", NOMBRE: "Pacífico" , location:{ type: "Point", coordinates: [ -3.682999563985, 40.404546025329545 ] } },
+  // {conquered_by: null, CODBARRIO: "3-1", NOMBRE: "Pacífico" , location:{ type: "Point", coordinates: [ -3.683140458800225, 40.40451893017277 ] } },
+  // {conquered_by: null, CODBARRIO: "3-1", NOMBRE: "Pacífico" , location:{ type: "Point", coordinates: [ -3.682912859483324, 40.404464739859222 ] } },
   {conquered_by: null, CODBARRIO: "3-1", NOMBRE: "Pacífico" , location:{ type: "Point", coordinates: [ -3.682945373671452, 40.404676082082055 ] } },
-  {conquered_by: null, CODBARRIO: "3-1", NOMBRE: "Pacífico" , location:{ type: "Point", coordinates: [ -3.683124201706161, 40.404719434332897 ] } },
-  {conquered_by: null, CODBARRIO: "3-1", NOMBRE: "Pacífico" , location:{ type: "Point", coordinates: [ -3.68302124011042, 40.40480071980322 ] } },
-  {conquered_by: null, CODBARRIO: "3-1", NOMBRE: "Pacífico" , location:{ type: "Point", coordinates: [ -3.682826154981647, 40.404589377580379 ] } },
+  // {conquered_by: null, CODBARRIO: "3-1", NOMBRE: "Pacífico" , location:{ type: "Point", coordinates: [ -3.683124201706161, 40.404719434332897 ] } },
+  // {conquered_by: null, CODBARRIO: "3-1", NOMBRE: "Pacífico" , location:{ type: "Point", coordinates: [ -3.68302124011042, 40.40480071980322 ] } },
+  // {conquered_by: null, CODBARRIO: "3-1", NOMBRE: "Pacífico" , location:{ type: "Point", coordinates: [ -3.682826154981647, 40.404589377580379 ] } },
  
       ]
 
